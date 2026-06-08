@@ -169,7 +169,7 @@ const isListening =
 
     const socket =
       io(
-        "http://localhost:4000"
+        "https://decisium-h1-production.up.railway.app"
       );
 
     socketRef.current =
