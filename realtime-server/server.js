@@ -11,7 +11,14 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: "*",
+    origin: [
+      "https://decisium-h1.vercel.app",
+    ],
+    methods: [
+      "GET",
+      "POST",
+    ],
+    credentials: true,
   },
 });
 
@@ -71,8 +78,11 @@ io.on("connection", (socket) => {
   });
 });
 
-server.listen(4000, () => {
+const PORT =
+  process.env.PORT || 4000;
+
+server.listen(PORT, () => {
   console.log(
-    "Realtime server running on port 4000"
+    `Realtime server running on port ${PORT}`
   );
 });
