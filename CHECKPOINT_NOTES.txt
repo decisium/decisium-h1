@@ -1,0 +1,8 @@
+- QR statico funzionante
+- single guest lock OK
+- audio notification OK
+- conversation separation OK
+- realtime stable
+- host branding OK
+- multilingual guest OK
+- speech recognition OK
