@@ -60,7 +60,9 @@ io.on("connection", (socket) => {
     socket.join(
       sessionId
     );
-
+io.to(sessionId).emit(
+  "guest-connected"
+);
     console.log(
       `User joined session: ${sessionId}`
     );
