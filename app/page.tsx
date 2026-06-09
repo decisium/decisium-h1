@@ -712,7 +712,7 @@ window.location.reload();
   };
   const joinUrl =
     sessionId
-      ? `http://localhost:3000/join/${sessionId}`
+      ? `${window.location.origin}/join/${sessionId}`
       : "";
 if (
   !isAuthenticated

@@ -12,8 +12,10 @@ const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
     origin: [
-      "https://decisium-h1.vercel.app",
-    ],
+  "http://localhost:3000",
+  "https://decisium-h1.vercel.app",
+  "https://decisium-h1-rbjqgduji-decisium-3254s-projects.vercel.app",
+],
     methods: [
       "GET",
       "POST",
