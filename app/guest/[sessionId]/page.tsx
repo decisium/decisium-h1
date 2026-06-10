@@ -647,9 +647,27 @@ setHostUnavailable(
 setReceptionClosed(
   false
 );
-    const socket =
 
-    socket.on(
+const socket =
+  io(
+    "https://decisium-h1-production.up.railway.app"
+  );
+
+socketRef.current =
+  socket;
+
+socket.emit(
+  "join-session",
+  {
+    sessionId,
+    language:
+      languageNames[
+        selectedLanguage
+      ],
+  }
+);
+
+socket.on(
   "receive-message",
   (data) => {
 
