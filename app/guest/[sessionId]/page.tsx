@@ -773,6 +773,18 @@ socket.on(
 
   }
 );
+
+socket.on(
+  "guest-connected",
+  () => {
+
+    setIsConnecting(
+      false
+    );
+
+  }
+);
+
 socket.on(
   "session-ended",
   () => {
